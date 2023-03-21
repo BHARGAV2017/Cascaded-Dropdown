@@ -86,6 +86,31 @@ DATABASES = {
         'PASSWORD': 'Mysql@2023',
         'HOST': 'localhost',
         'PORT': '3306',
+    },
+    'nath':{
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bnath',
+        'USER': 'root',
+        'PASSWORD': 'Mysql@2023',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+    ,
+    'nath':{
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bnath2',
+        'USER': 'root',
+        'PASSWORD': 'Mysql@2023',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    },
+    'nath':{
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'world',
+        'USER': 'root',
+        'PASSWORD': 'Mysql@2023',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
