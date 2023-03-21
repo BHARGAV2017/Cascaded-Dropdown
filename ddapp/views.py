@@ -101,8 +101,6 @@ def listFKTable(db):
         return join
 
 
-# listFKTable('sakila')
-#{'address': ['city'], 'city': ['country'], 'customer': ['address', 'store'], 'ddapp_district': ['ddapp_state'], 'ddapp_state': ['ddapp_country'], 'film': ['language', 'language'], 'film_actor': ['actor', 'film'], 'film_category': ['category', 'film'], 'inventory': ['film', 'store'], 'payment': ['customer', 'rental', 'staff'], 'rental': ['customer', 'inventory', 'staff'], 'staff': ['address', 'store'], 'store': ['address', 'staff']}
 
 def generateJoinTableColumn(dbname, tablename):
     for i in listFKTable(dbname):
@@ -219,3 +217,33 @@ def dependantfield(request):
     
     return render(request,'dependantfield.html', locals())
     # return request
+
+
+#{'address': ['city'], 'city': ['country'], 'customer': ['address', 'store'], 'ddapp_district': ['ddapp_state'], 'ddapp_state': ['ddapp_country'], 'film': ['language', 'language'], 'film_actor': ['actor', 'film'], 'film_category': ['category', 'film'], 'inventory': ['film', 'store'], 'payment': ['customer', 'rental', 'staff'], 'rental': ['customer', 'inventory', 'staff'], 'staff': ['address', 'store'], 'store': ['address', 'staff']}
+
+#
+# (('city',), ('country',), ('countrylanguage',))
+# defaultdict(<class 'list'>, {'address': ['city'], 'city': ['country'], 'customer': ['address', 'store'], 'ddapp_district': ['ddapp_state'], 'ddapp_state': ['ddapp_country'], 'film': ['language', 'language'], 'film_actor': ['actor', 'film'], 'film_category': ['category', 'film'], 'inventory': ['film', 'store'], 'payment': ['customer', 'rental', 'staff'], 'rental': ['customer', 'inventory', 'staff'], 'staff': ['address', 'store'], 'store': ['address', 'staff']})
+# ['address', 'city', 'city_id']
+# ['city', 'country', 'country_id']
+# ['customer', 'address', 'address_id']
+# ['customer', 'store', 'store_id']
+# ['ddapp_district', 'ddapp_state', 'state_id']
+# ['ddapp_state', 'ddapp_country', 'country_id']
+# ['film', 'language', 'language_id']
+# ['film', 'language', 'original_language_id']
+# ['film_actor', 'actor', 'actor_id']
+# ['film_actor', 'film', 'film_id']
+# ['film_category', 'category', 'category_id']
+# ['film_category', 'film', 'film_id']
+# ['inventory', 'film', 'film_id']
+# ['inventory', 'store', 'store_id']
+# ['payment', 'rental', 'rental_id']
+# ['payment', 'staff', 'staff_id']
+# ['rental', 'customer', 'customer_id']
+# ['rental', 'inventory', 'inventory_id']
+# ['rental', 'staff', 'staff_id']
+# ['staff', 'address', 'address_id']
+# ['staff', 'store', 'store_id']
+# ['store', 'address', 'address_id']
+# ['store', 'staff', 'manager_staff_id']
